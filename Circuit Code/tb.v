@@ -1,7 +1,8 @@
 module TB;
   reg CLK = 0, rst = 1;
   wire[3:0] Q;
-  gen g1 (CLK, rst, Q);
+  wire[3:0] Qbar;
+  gen g1 (CLK, rst, Q, Qbar);
 
   initial begin 
     $dumpfile("tb_dump.vcd"); 
