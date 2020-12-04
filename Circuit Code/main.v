@@ -13,12 +13,12 @@ module jkff(input  J, K , clk ,rst, output reg Q, output reg Qbar);
     end
 
     if(rst)
-      Qbar <= 1'b0; 
+      Qbar <= 1'b1; 
     else begin
       case({J,K})
         2'b00 : Qbar <= Qbar; 
-        2'b01 : Qbar <= 1'b0; 
-        2'b10 : Qbar <= 1'b1; 
+        2'b01 : Qbar <= 1'b1; 
+        2'b10 : Qbar <= 1'b0; 
         2'b11 : Qbar <= ~Qbar  ;
       endcase
     end
